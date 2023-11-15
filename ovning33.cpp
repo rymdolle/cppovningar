@@ -3,8 +3,12 @@
 void initialer(const char* namn)
 {
   std::cout << *namn;
-  while (*namn++ != ' ');
-  std::cout << *namn;
+  while (*namn != ' ') {
+    ++namn;
+    if (*namn == '\0')
+      return;
+  }
+  std::cout << *(namn+1);
 }
 
 int main()
