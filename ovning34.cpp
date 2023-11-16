@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 
-void reverse(char* text, size_t length)
+void reverse(char *text, size_t length)
 {
   char *end = text + length - 1;
   for (size_t i = 0; (text+i) < (end-i); ++i) {
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
   std::cout << "Enter text:\t";
   std::cin.getline(text, 80);
 
-  int length = strlen(text);
+  size_t length = strlen(text);
   reverse(text, length);
   std::cout << "Reverse:\t" << text << "\n";
 
